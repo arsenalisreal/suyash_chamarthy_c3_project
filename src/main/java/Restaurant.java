@@ -9,8 +9,8 @@ public class Restaurant {
     public LocalTime openingTime;
     public LocalTime closingTime;
     private List<Item> menu = new ArrayList<Item>();
-    //private List<Item> selectedItems = new ArrayList<Item>();
-    //private int costOfMenu = 0;
+    private List<Item> selectedItems = new ArrayList<Item>();
+    private int costOfMenu = 0;
 
     public Restaurant(String name, String location, LocalTime openingTime, LocalTime closingTime) {
         this.name = name;
