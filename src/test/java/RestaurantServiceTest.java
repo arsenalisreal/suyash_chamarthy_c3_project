@@ -47,7 +47,7 @@ class RestaurantServiceTest {
     }
 
     @Test
-    public void removing_restaurant_that_does_not_exist_should_throw_exception() throws restaurantNotFoundException {
+    public void removing_restaurant_that_does_not_exist_should_throw_exception() {
         assertThrows(restaurantNotFoundException.class,()->service.removeRestaurant("Pantry d'or"));
     }
 
