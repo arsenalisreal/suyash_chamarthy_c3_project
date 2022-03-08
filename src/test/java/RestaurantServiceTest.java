@@ -1,5 +1,4 @@
 import org.junit.jupiter.api.*;
-
 import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,7 +46,7 @@ class RestaurantServiceTest {
     }
 
     @Test
-    public void removing_restaurant_that_does_not_exist_should_throw_exception() {
+    public void removing_restaurant_that_does_not_exist_should_throw_exception() throws restaurantNotFoundException {
         assertThrows(restaurantNotFoundException.class,()->service.removeRestaurant("Pantry d'or"));
     }
 
