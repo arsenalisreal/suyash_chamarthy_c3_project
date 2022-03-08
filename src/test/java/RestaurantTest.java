@@ -13,25 +13,9 @@ class RestaurantTest {
         restaurant.addToMenu("Sweet corn soup",119);
         restaurant.addToMenu("Vegetable lasagne", 269);
         restaurant.addToMenu("Penne Pasta", 239);
-        restaurant.selectItem("Sweet corn soup");
+    
     }
 
-    @Test
-    public void after_selecting_an_item_the_length_of_list_should_increase_by_1() throws itemNotFoundException{
-        int initialSelectionSize = restaurant.selectedItemsFromMenu();
-        restaurant.selectItem("Vegetable lasagne");
-        assertEquals(initialSelectionSize+1,restaurant.selectedItemsFromMenu());
-
-    }
-
-    //>>>>>>>>>>>>>>>>>>>>>>Customer: Selected menu<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-    @Test
-    public void display_the_sum_of_all_items_selected_from_the_menu() throws itemNotFoundException {
-        restaurant.selectItem("Vegetable lasagne");
-        assertEquals(restaurant.selectedPrice(), 388);
-    }
-
-    //<<<<<<<<<<<<<<<<<<<<Customer: Selected menu>>>>>>>>>>>>>>>>>>>>>>>>>>
     @Test
     public void is_restaurant_open_should_return_true_if_time_is_between_opening_and_closing_time(){
         assertTrue(restaurant.isRestaurantOpen());

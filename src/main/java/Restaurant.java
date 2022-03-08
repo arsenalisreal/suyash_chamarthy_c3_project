@@ -9,8 +9,8 @@ public class Restaurant {
     public LocalTime openingTime;
     public LocalTime closingTime;
     private List<Item> menu = new ArrayList<Item>();
-    private List<Item> selectedItems = new ArrayList<Item>();
-    private int costOfMenu = 0;
+    //private List<Item> selectedItems = new ArrayList<Item>();
+    //private int costOfMenu = 0;
 
     public Restaurant(String name, String location, LocalTime openingTime, LocalTime closingTime) {
         this.name = name;
@@ -66,23 +66,5 @@ public class Restaurant {
         return name;
     }
 
-    public List<Item> selectItem(String dishName) {
-        List<Item> menuItems = getMenu();
-        for(Item item:menuItems){
-            if(dishName.equals(item.getName())){
-                costOfMenu+= item.getPrice();
-                selectedItems.add(item);
-            }
-        }
-        return selectedItems;
-    }
-
-    public int selectedItemsFromMenu(){
-        return selectedItems.size();
-    }
-
-    public Integer selectedPrice() {
-        return costOfMenu;
-    }
 
 }
